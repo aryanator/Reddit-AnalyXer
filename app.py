@@ -28,7 +28,7 @@ sentiment_analyzer = load_sentiment_analyzer()
 
 # Streamlit app
 st.title("Reddit Posts Summarizer and Analyzer")
-
+st.markdown("**Use this link for a small and faster model:** [Alternative Model](https://reddit-summarixer.streamlit.app/)")
 # User input
 subreddit_name = st.text_input("Enter a subreddit name (e.g., MachineLearning):")
 limit = st.slider("Number of posts to summarize:", 1, 10, 5)
