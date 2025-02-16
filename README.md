@@ -27,7 +27,7 @@ A web app that fetches and summarizes the latest posts from any Reddit subreddit
 To run the app locally:
 1. Clone the repository:
     ```bash
-    git clone https://github.com/your-username/reddit-summarizer.git
+    git clone https://github.com/aryanator/Reddit-AnalyXer.git
    
 2. Install dependencies:
     ```bash
