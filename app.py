@@ -66,7 +66,7 @@ if subreddit_name:
         with st.spinner("Generating summaries..."):
             summaries = []
             for post in posts:
-                prompt = f"Summarize the following Reddit post and its top comments:\n{post['title']}\n{post['content']}\n"
+                prompt = f"Summarize the following Reddit post and its top comments:\n{post}\n"
                 summary = generate_summary(prompt)
                 summaries.append({
                     "title": post['title'],
