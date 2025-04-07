@@ -14,9 +14,11 @@ from transformers import pipeline, AutoModelForSeq2SeqLM, AutoTokenizer
 # Cache the summarization model to load only once
 
 # Cache the sentiment analysis model to load only once
+
 @st.cache_resource
 def load_sentiment_analyzer():
-    return pipeline("sentiment-analysis")
+    return pipeline("sentiment-analysis", model="nlptown/bert-base-multilingual-uncased-sentiment")
+
 
 # Load the models once
 #summarizer = load_summarization_model()
