@@ -18,7 +18,7 @@ def load_sentiment_analyzer():
     return pipeline("sentiment-analysis", model="distilbert-base-uncased-finetuned-sst-2-english")
 
 # Load the models once
-summarizer = load_summarization_model()
+#summarizer = load_summarization_model()
 sentiment_analyzer = load_sentiment_analyzer()
 
 # Function to generate summary using the API
