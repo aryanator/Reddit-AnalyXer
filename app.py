@@ -9,6 +9,24 @@ import time
 import os
 from together import Together
 
+
+# Cache the summarization model to load only once
+@st.cache_resource
+def load_summarization_model():
+    model = AutoModelForSeq2SeqLM.from_pretrained("facebook/bart-large-cnn")
+    tokenizer = AutoTokenizer.from_pretrained("facebook/bart-large-cnn")
+    summarizer = pipeline("summarization", model=model, tokenizer=tokenizer, device="cpu")
+    return summarizer
+
+# Cache the sentiment analysis model to load only once
+@st.cache_resource
+def load_sentiment_analyzer():
+    return pipeline("sentiment-analysis", model="distilbert-base-uncased-finetuned-sst-2-english")
+
+# Load the models once
+summarizer = load_summarization_model()
+sentiment_analyzer = load_sentiment_analyzer()
+
 # Function to generate summary using the API
 def generate_summary(prompt):
     os.environ["TOGETHER_API_KEY"] = "3045ace567b59cd96ed78310bee29038b11611cfce527e0da8ed9c7ae4da67e1"
@@ -83,7 +101,7 @@ if subreddit_name:
     if show_sentiment:
         st.write("### Sentiment Analysis of the Subreddit")
         with st.spinner("Analyzing sentiment..."):
-            sentiment_distribution = get_sentiment_distribution(posts)
+            sentiment_distribution = get_sentiment_distribution(posts, sentiment_analyzer)
             
             # Display sentiment distribution as a bar chart
             st.write("**Sentiment Distribution**")
