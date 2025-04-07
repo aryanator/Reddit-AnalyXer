@@ -8,21 +8,6 @@ import matplotlib.pyplot as plt
 import time
 import os
 from together import Together
-from transformers import pipeline, AutoModelForSeq2SeqLM, AutoTokenizer
-
-
-# Cache the summarization model to load only once
-
-# Cache the sentiment analysis model to load only once
-
-@st.cache_resource
-def load_sentiment_analyzer():
-    return pipeline("sentiment-analysis", model="nlptown/bert-base-multilingual-uncased-sentiment")
-
-
-# Load the models once
-#summarizer = load_summarization_model()
-sentiment_analyzer = load_sentiment_analyzer()
 
 # Function to generate summary using the API
 def generate_summary(prompt):
@@ -98,14 +83,14 @@ if subreddit_name:
     if show_sentiment:
         st.write("### Sentiment Analysis of the Subreddit")
         with st.spinner("Analyzing sentiment..."):
-            sentiment_distribution = get_sentiment_distribution(posts, sentiment_analyzer)
+            sentiment_distribution = get_sentiment_distribution(posts)
             
             # Display sentiment distribution as a bar chart
             st.write("**Sentiment Distribution**")
             labels = list(sentiment_distribution.keys())
             counts = list(sentiment_distribution.values())
             fig, ax = plt.subplots()
-            ax.bar(labels, counts, color=["green", "red"])
+            ax.bar(labels, counts, color=["green", "gray", "red"])
             ax.set_xlabel("Sentiment")
             ax.set_ylabel("Count")
             ax.set_title("Sentiment Distribution in Posts and Comments")
