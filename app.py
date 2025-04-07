@@ -16,7 +16,7 @@ from transformers import pipeline, AutoModelForSeq2SeqLM, AutoTokenizer
 # Cache the sentiment analysis model to load only once
 @st.cache_resource
 def load_sentiment_analyzer():
-    return pipeline("sentiment-analysis", model="distilbert-base-uncased-finetuned-sst-2-english")
+    return pipeline("sentiment-analysis")
 
 # Load the models once
 #summarizer = load_summarization_model()
