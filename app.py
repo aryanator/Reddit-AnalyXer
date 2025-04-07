@@ -11,12 +11,6 @@ from together import Together
 
 
 # Cache the summarization model to load only once
-@st.cache_resource
-def load_summarization_model():
-    model = AutoModelForSeq2SeqLM.from_pretrained("facebook/bart-large-cnn")
-    tokenizer = AutoTokenizer.from_pretrained("facebook/bart-large-cnn")
-    summarizer = pipeline("summarization", model=model, tokenizer=tokenizer, device="cpu")
-    return summarizer
 
 # Cache the sentiment analysis model to load only once
 @st.cache_resource
