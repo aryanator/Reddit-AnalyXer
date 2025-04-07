@@ -83,7 +83,7 @@ if subreddit_name:
     if show_sentiment:
         st.write("### Sentiment Analysis of the Subreddit")
         with st.spinner("Analyzing sentiment..."):
-            sentiment_distribution = get_sentiment_distribution(posts)
+            sentiment_distribution = get_sentiment_distribution(posts[0])
             
             # Display sentiment distribution as a bar chart
             st.write("**Sentiment Distribution**")
