@@ -8,6 +8,11 @@ A web app that fetches and summarizes the latest posts from any Reddit subreddit
 - Clean text by removing URLs and special characters.
 - Deployed using Streamlit Sharing.
 
+## Images
+![Dashboard](Images-MCB/ra1.png)
+![Summary](Images-MCB/ra2.png)
+![Visualization](Images-MCB/ra3.png)
+
 ## How to Use
 1. Enter a subreddit name (e.g., `MachineLearning`).
 2. Adjust the slider to choose the number of posts to summarize.
