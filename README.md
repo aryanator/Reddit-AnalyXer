@@ -10,7 +10,6 @@ A web app that fetches and summarizes the latest posts from any Reddit subreddit
 
 ## 🎥 Demo
 ![LocalityAI Demo](Images-RA/redditanalyzer-ai.gif)
-![Summary](Images-RA/ra2.png)
 ![Visualization](Images-RA/ra3.png)
 
 ## How to Use
