@@ -8,8 +8,9 @@ A web app that fetches and summarizes the latest posts from any Reddit subreddit
 - Clean text by removing URLs and special characters.
 - Deployed using Streamlit Sharing.
 
-## Images
-![Dashboard](Images-RA/ra1.png)
+## 🎥 Demo
+![LocalityAI Demo](Images-RA/redditanalyzer-demo.gif)
+
 ![Summary](Images-RA/ra2.png)
 ![Visualization](Images-RA/ra3.png)
 
