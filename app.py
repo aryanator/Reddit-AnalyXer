@@ -10,7 +10,7 @@ from together import Together
 
 # Function to generate summary and sentiment using the Together API
 def generate_summary_and_sentiment(prompt):
-    os.environ["TOGETHER_API_KEY"] = "3045ace567b59cd96ed78310bee29038b11611cfce527e0da8ed9c7ae4da67e1"
+    os.environ["TOGETHER_API_KEY"] = ""
     client = Together(api_key=os.environ["TOGETHER_API_KEY"])
     response = client.chat.completions.create(
         model="meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo",
