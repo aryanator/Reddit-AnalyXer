@@ -5,9 +5,9 @@ from collections import Counter
 from wordcloud import WordCloud
 
 # Replace with your Reddit API credentials
-CLIENT_ID = "G6R7wy_ArTl2L3zuqFB8sA"
-CLIENT_SECRET = "H1Hv2Ys46-wkgJmD4B6_gL-3-ACGHw"
-USER_AGENT = "Flimsy_Mouse_622"
+CLIENT_ID = ""
+CLIENT_SECRET = ""
+USER_AGENT = ""
 
 # Authenticate
 reddit = praw.Reddit(
