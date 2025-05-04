@@ -9,8 +9,8 @@ A web app that fetches and summarizes the latest posts from any Reddit subreddit
 - Deployed using Streamlit Sharing.
 
 ## 🎥 Demo
-![LocalityAI Demo](Images-RA/redditanalyzer-ai.gif)
-![Visualization](Images-RA/ra3.png)
+![LocalityAI Demo](images/redditanalyzer-ai.gif)
+![Visualization](images/ra3.png)
 
 ## How to Use
 1. Enter a subreddit name (e.g., `MachineLearning`).

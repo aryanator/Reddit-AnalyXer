@@ -1,5 +1,5 @@
 import streamlit as st
-from reddit_fetcher import (
+from services.reddit_fetcher import (
     fetch_posts,
     generate_word_cloud,
 )
